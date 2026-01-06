@@ -10,12 +10,12 @@ assignees: ""
 Please specify the version of **SPP-V2-Query-Builder** you are using.
 
 Example: `0.0.0.2`
-
+Used Version: 
 ---
 
 ## Required Declaration Files
 The application always uses all declaration files.  
-To reproduce bugs reliably, **all of the following `.sav` files must be attached**:
+To reproduce bugs reliably, **all of the following `.sav` files must be compressed as zip and attached**:
 
 - `actions.sav`
 - `condsourcetypes.sav`
@@ -60,7 +60,7 @@ If the issue can be reproduced, please attach the corresponding **save state**.
 
 This is **strongly recommended** and greatly helps debugging.
 
-➡️ Drag & drop the save state file here
+➡️ Drag & drop the save state files as zip here
 
 ---
 
