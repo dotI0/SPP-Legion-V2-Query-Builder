@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help improve SPP-V2-Query-Builder
 title: "[Bug]: "
-labels: bug
+labels: bug "not reviewed yet"
 assignees: ""
 ---
 
