@@ -1,0 +1,173 @@
+0;SMART_ACTION_NONE;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;No action.;
+1;SMART_ACTION_TALK;only creatures;True;;creature_text.groupid;;True;;duration (in ms);;False;;;;False;;;;False;;;;False;;;;Creature says text.||Triggers SMART_EVENT_TEXT_OVER after duration P2.;SPP missing P3 from TC!|(talktarget)
+2;SMART_ACTION_SET_FACTION;only creatures;True;;FactionId (or 0 for default);;False;;;;False;;;;False;;;;False;;;;False;;;;Sets faction to creature.;
+3;SMART_ACTION_MORPH_TO_ENTRY_OR_MODEL;only creatures;True;;creature entry (0 demorph);P1 OR P2!;True;;modelID (0 demorph);P1 OR P2!;False;;;;False;;;;False;;;;False;;;;Take displayId from creature (P1) or set model (P2), both 0 to demorph.;
+4;SMART_ACTION_SOUND;only creatures;True;;SoundID;;True;0:only self|1:everyone in vis range;TextRange;;False;;;;False;;;;False;;;;False;;;;Play Sound.;SPP missing P3 from TC!|(distant sound)
+5;SMART_ACTION_PLAY_EMOTE;only creatures;True;;EmoteId;;False;;;;False;;;;False;;;;False;;;;False;;;;Play Emote.;
+6;SMART_ACTION_FAIL_QUEST;only players;True;;QuestID;;False;;;;False;;;;False;;;;False;;;;False;;;;Fail Quest of Target.;
+7;SMART_ACTION_ADD_QUEST;only players;True;;QuestID;;False;;;;False;;;;False;;;;False;;;;False;;;;Add Quest to Target.;SPP missing P2 from TC!|(direct add)||TC>SMART_ACTION_OFFER_QUEST|
+8;SMART_ACTION_SET_REACT_STATE;only creatures;True;0:Passive|1:Defensive|2:Aggressive|3:Assist;React State;;False;;;;False;;;;False;;;;False;;;;False;;;;Set React State of creature.;
+9;SMART_ACTION_ACTIVATE_GOBJECT;only gameobjects;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Activate target gobject.;
+10;SMART_ACTION_RANDOM_EMOTE;only creatures;True;;EmoteId1;;True;;EmoteId2;;True;;EmoteId3;;True;;EmoteId4;;True;;EmoteId5;;True;;EmoteId6;;Play Random Emote between P1-P6.;
+11;SMART_ACTION_CAST;only players & creatures;True;;SpellID;;True;1:Interrupt spell casting|2:Triggered|4:Forces cast even if OOM OOR|8:Prevents from melee if OOM OOR|16:Forces cast on itself|32:Only casts if target not have aura|64:Stop movement on cast unless OOM OOR silenced LOS;cast flags;;False;;;;False;;;;False;;;;False;;;;Cast Spell ID at Target.;SPP missing P3 from TC!|(triggered flags)
+12;SMART_ACTION_SUMMON_CREATURE;only players & creatures;True;;CreatureID (entry);;True;1:after time or disappear despawn|2:after time or death despawn|3:after time despawn|4:time after out combat despawn|5:instant after death despawn|6:time after death despawn|7:disappear despawn|8:manual despawn;SummonType;;True;;Duration (in ms);;True;;StorageID (targetlist);Not working!;True;0:dont attack invoker|1:attack invoker;AttackInvoker;;False;;;;Summons Creature (and stores it to targetlist).;
+13;SMART_ACTION_THREAT_SINGLE_PCT;only players & creatures;True;;Threat%;;False;;;;False;;;;False;;;;False;;;;False;;;;Change Threat Percentage for Single Target.;
+14;SMART_ACTION_THREAT_ALL_PCT;only players & creatures;True;;Threat%;;False;;;;False;;;;False;;;;False;;;;False;;;;Change Threat Percentage for All Enemies.;
+15;SMART_ACTION_CALL_AREAEXPLOREDOREVENTHAPPENS;only players;True;;QuestID;;False;;;;False;;;;False;;;;False;;;;False;;;;Call AREAEXPLORED EVENT for player. |Used if Quest has SpecialFlag 2.|(Mostly for Quests without objectives);
+16;SMART_ACTION_SEND_CASTCREATUREORGO;only players & creatures;True;;QuestID;;True;;SpellId;;False;;;;False;;;;False;;;;False;;;;?;SPP> No documentation!||TC>SMART_ACTION_SET_INGAME_PHASE_ID |
+17;SMART_ACTION_SET_EMOTE_STATE;only creatures;True;;EmoteID;;False;;;;False;;;;False;;;;False;;;;False;;;;Play Emote Continuously.;
+18;SMART_ACTION_SET_UNIT_FLAG;only creatures;True;;Flags;;True;0:unit_flags|1:unit_flags2;TargetType;;False;;;;False;;;;False;;;;False;;;;Set creature_template.unit_flag.;
+19;SMART_ACTION_REMOVE_UNIT_FLAG;only creatures;True;;Flags;;True;0:unit_flags|1:unit_flags2;TargetType;;False;;;;False;;;;False;;;;False;;;;Remove flag from creature_template.unit_flag.;
+20;SMART_ACTION_AUTO_ATTACK;only creatures;True;0:stop attack;AllowAttackState;not 0 means keep attacking;False;;;;False;;;;False;;;;False;;;;False;;;;Set Auto Attack State.;
+21;SMART_ACTION_ALLOW_COMBAT_MOVEMENT;only creatures;True;0:stop combat based movement;AllowCombatMovement;anything else continue attacking;False;;;;False;;;;False;;;;False;;;;False;;;;Allow or Disable Combat Movement.;
+22;SMART_ACTION_SET_EVENT_PHASE;only creatures & gameobjects;True;0:0|1:1|2:2|3:3|4:4|5:5|6:6|7:7|8:8|9:9|10:10;PhaseMaskDec;;False;;;;False;;;;False;;;;False;;;;False;;;;Set EventPhaseMask. ||P1 is Decimal value of PhaseMask!|In EventPhasemask you have to use the Bitmask!|0:0,1:1,2:2,3:4,4:8,5:16,6:32,7:64,8:128,9:256,10:512|;TC mentions 12 Phases, SPP Core may ignore everything above 10.
+23;SMART_ACTION_INC_EVENT_PHASE;only creatures & gameobjects;True;;Value to Increment (can be negative to decrement);should not be 0;False;;;;False;;;;False;;;;False;;;;False;;;;Increments (or decrements) Event Phasemask.;
+24;SMART_ACTION_EVADE;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Evade out of combat.;SPP missing P1 from TC!|(move options)
+25;SMART_ACTION_FLEE_FOR_ASSIST;only creatures;True;0:dont announce|1:announce;AnnounceFlee;;False;;;;False;;;;False;;;;False;;;;False;;;;Flee out of Combat.||If you want the fleeing NPC to say attempts to flee text on flee, use 1 on param1. For no message use 0.;
+26;SMART_ACTION_CALL_GROUPEVENTHAPPENS;only players;True;;QuestID;;False;;;;False;;;;False;;;;False;;;;False;;;;Marks a Quest as completed for group of player.||Could be used with a quest flag?;
+27;SMART_ACTION_PLAY_SPELL_VISUAL_KIT;only creatures;True;;KitType;;True;;KitRecID;;True;;Duration;;False;;;;False;;;;False;;;;Play VisalKit?;TC>SMART_ACTION_COMBAT_STOP
+28;SMART_ACTION_REMOVEAURASFROMSPELL;only players & creatures;True;;SpellID;0 removes all auras;False;;;;False;;;;False;;;;False;;;;False;;;;Removes aura from spellid.;
+29;SMART_ACTION_FOLLOW;only players & creatures;True;;Distance (in yard);0 = default;True;;Angle;0 = default;True;;End Creature Entry;;True;;CreditID;;True;0:monsterkill|1:event;CreditType;;False;;;;Start Follow on Target.||Automaticly stopps on creature P3 and rewards credittype P5 with creditid P4. Then it despawns.;
+30;SMART_ACTION_RANDOM_PHASE;only creatures & gameobjects;True;;EventPhaseId1;Decimal;True;;EventPhaseId2;Decima;True;;EventPhaseId3;Decima;True;;EventPhaseId4;Decima;True;;EventPhaseId5;Decima;True;;EventPhaseId6;Decima;Set Random EventPhaseMask between P1-P6.;
+31;SMART_ACTION_RANDOM_PHASE_RANGE;only creatures & gameobjects;True;;EventPhaseMaskMin;Decimal;True;;EventPhaseMaskMax;Decimal;False;;;;False;;;;False;;;;False;;;;Choose a random EventPhaseMask between range P1-P2.;
+32;SMART_ACTION_RESET_GOBJECT;only gameobjects;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Reset Gameobject,;
+33;SMART_ACTION_CALL_KILLEDMONSTER;only creatures;True;;CreatureId (entry);;False;;;;False;;;;False;;;;False;;;;False;;;;Credit Monsterkill to player.;
+34;SMART_ACTION_SET_INST_DATA;all;True;;FieldID;;True;;Data;;False;;;;False;;;;False;;;;False;;;;Set Instance Data.||Whatever that means..;
+35;SMART_ACTION_SET_INST_DATA64;only creatures;True;;FieldID;;False;;;;False;;;;False;;;;False;;;;False;;;;Set Instance Data uint64.||Whatever that means..;
+36;SMART_ACTION_UPDATE_TEMPLATE;only creatures;True;;Entry;;True;;Team;;False;;;;False;;;;False;;;;False;;;;Updates creature_template to given entry?;
+37;SMART_ACTION_DIE;only players & creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Kill Target.;
+38;SMART_ACTION_SET_IN_COMBAT_WITH_ZONE;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Set in Combat with Zone.;
+39;SMART_ACTION_CALL_FOR_HELP;only creatures;True;;Radius (in yard);;False;;;;False;;;;False;;;;False;;;;False;;;;Call for help in Radius.;SPP missing P1 from TC!|(send help msg to chat)
+40;SMART_ACTION_SET_SHEATH;only creatures;True;0:unarmed|1:melee|2:ranged;State;;False;;;;False;;;;False;;;;False;;;;False;;;;Sets the SHeath State of an creature.;
+41;SMART_ACTION_FORCE_DESPAWN;only creatures;True;;Timer (in ms);;False;;;;False;;;;False;;;;False;;;;False;;;;Despawns creature after delay.;
+42;SMART_ACTION_SET_INVINCIBILITY_HP_LEVEL;only creatures;True;;HPValue;;True;;HP% (0-100);;False;;;;False;;;;False;;;;False;;;;Set HP level at wich point creature will be invincible.||If you use both params, only percent will be used.;
+43;SMART_ACTION_MOUNT_TO_ENTRY_OR_MODEL;only creatures;True;;CreatureID (creature_template.entry);P1 or P2! P1,2=0 for dismount.;True;;ModelID;P1 or P2! P1,2=0 for dismount.;False;;;;False;;;;False;;;;False;;;;Mount to Creature Entry OR Mount to Creature Display OR Unmount.;
+44;SMART_ACTION_SET_INGAME_PHASE_MASK;only creatures;True;;PhaseMask;;False;;;;False;;;;False;;;;False;;;;False;;;;Set PhaseMask for creature.;TC> SMART_ACTION_SET_INGAME_PHASE_GROUP
+45;SMART_ACTION_SET_DATA;only creatures;True;;FieldID;;True;;Data;;False;;;;False;;;;False;;;;False;;;;Set Data For Target, can be used with SMART_EVENT_DATA_SET.;Wont work on another creature of the same entry id. Need to use another creature to hop.||SPP mentions only creatures!
+46;SMART_ACTION_MOVE_FORWARD;only creatures;True;;distance (in yard);;False;;;;False;;;;False;;;;False;;;;False;;;;Moves distance x forward.;TC>SMART_ACTION_ATTACK_STOP 
+47;SMART_ACTION_SET_VISIBILITY;only creatures;True;0:invisible|1:visible;Visible?;;False;;;;False;;;;False;;;;False;;;;False;;;;Makes creature Visible/Invisible.;
+48;SMART_ACTION_SET_ACTIVE;only creatures;False;;No Params;;False;;;;False;;;;False;;;;False;;;;False;;;;Missing documentation!||"It may be something that tries to set an NPC/object to actively start scripting even when out of range";SPP missing P1 from TC!|(active)
+49;SMART_ACTION_ATTACK_START;only players & creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Allows basic melee swings to creature.;
+50;SMART_ACTION_SUMMON_GO;only gameobjects;True;;GameObjectID (entry);;True;;DespawnTime (in s);;False;;;;False;;;;False;;;;False;;;;Spawns Gameobject, use target_type to set spawn position.;SPP missing P3 from TC!|(despawn timer options)
+51;SMART_ACTION_KILL_UNIT;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Kills creature.;
+52;SMART_ACTION_ACTIVATE_TAXI;only players;True;;TaxiID;;False;;;;False;;;;False;;;;False;;;;False;;;;Sends player to flight path.;You have to be close to Flight Master, which gives Taxi ID you need.
+53;SMART_ACTION_WP_START;only creatures;True;0:walk|1:run;Run/Walk;;True;;waypoints.entry (PathID);;True;0:stopps|1:repeats;CanRepeat?;;True;;QuestID;;True;;despawntime (in ms);;True;0:Passive|1:Defensive|2:Aggressive|3:Assist;ReactState;;Creature starts Waypoint Movement.||Use waypoints table to create movement.;
+54;SMART_ACTION_WP_PAUSE;only creatures;True;;time (in ms);;False;;;;False;;;;False;;;;False;;;;False;;;;Creature pauses its Waypoint Movement for given time.;
+55;SMART_ACTION_WP_STOP;only creatures;True;;despawnTime (in ms);0 could mean no despawn;True;;QuestID;;True;0:nothing|1:quest failed;QuestFail?;;False;;;;False;;;;False;;;;Creature stops its Waypoint Movement.;
+56;SMART_ACTION_ADD_ITEM;only players;True;;itemID;;True;;count;;False;;;;False;;;;False;;;;False;;;;Add Item(s) to player.;
+57;SMART_ACTION_REMOVE_ITEM;only players;True;;itemID;;True;;count;;False;;;;False;;;;False;;;;False;;;;Remove Item(s) from player.;
+58;SMART_ACTION_INSTALL_AI_TEMPLATE;only creatures;True;0:basic|1:caster|2:turret|3:passive|4:CAGED_GO_PART|5:CAGED_NPC_PART;AITemplateID;;True;;;Depends on P1!;True;;;Depends on P1!;True;;;Depends on P1!;True;;;Depends on P1!;True;;;Depends on P1!;Install AITemplateID >>> P1 - Follow Params |0 - (nothing is preset)|1 - spellid,repeatMin,repeatMax,range,manaPCT,tp1:castFlag|2 - spellid,repeatMin,repeatMax,tp1:castFlag|3 - (none)|4 - creatureID,give credit at point end|5 - gameObjectID, despawntime, run, dist,TextGroupID;
+59;SMART_ACTION_SET_RUN;only creatures;True;0:cant run|1:is running;Runns?;;False;;;;False;;;;False;;;;False;;;;False;;;;Set running.;
+60;SMART_ACTION_SET_FLY;only creatures;True;0:cant fly|1:is flying;Flys?;;False;;;;False;;;;False;;;;False;;;;False;;;;Set do Fly.;TC mentions Only works for creatures with inhabit air.||TC>SMART_ACTION_SET_DISABLE_GRAVITY
+61;SMART_ACTION_SET_SWIM;only creatures;True;0:cant swim|1:can swim;Can Swim?;;False;;;;False;;;;False;;;;False;;;;False;;;;Set Can Swim.;
+62;SMART_ACTION_TELEPORT;only players & creatures;True;;MapID (.gps);;False;;;;False;;;;False;;;;False;;;;False;;;;Teleports to xyz on specific map.||Use any target_type (except 0), and use target_x, target_y, target_z, target_o as the coordinates;Dont use target type 8y user one depending on what will be teleported
+63;SMART_ACTION_STORE_VARIABLE_DECIMAL;only creatures;True;;VariableID (slot);;True;;Variable;;False;;;;False;;;;False;;;;False;;;;Store Variable on Slot.;Cant be used because there are no events using this variables.||TC>SMART_ACTION_SET_COUNTER||
+64;SMART_ACTION_STORE_TARGET_LIST;only creatures;True;;TargetListID;;False;;;;False;;;;False;;;;False;;;;False;;;;Store Target to own targetlist.;
+65;SMART_ACTION_WP_RESUME;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Creature continues in its Waypoint Movement.;
+66;SMART_ACTION_SET_ORIENTATION;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Sets Orientation.||Depends on the script target.|if SMART_TARGET_SELF, facing will be the same as in HomePosition, For SMART_TARGET_POSITION you need to set target_o : 0 = North, West = 1.5, South = 3, East = 4.5;
+67;SMART_ACTION_CREATE_TIMED_EVENT;only creatures;True;;Timed Event ID;;True;;InitialMin (min startdelay in ms);;True;;InitialMax (max startdelay in ms);;True;;RepeatMin (min repeatdelay in ms);;True;;RepeatMax (max repeatdelay in ms);;True;;Chance (0-100);;Create Timed Event for creature.|Use with event 59 >|SMART_EVENT_TIMED_EVENT_TRIGGERED;
+68;SMART_ACTION_PLAYMOVIE;only players;True;;MovieID (entry);;False;;;;False;;;;False;;;;False;;;;False;;;;Play Movie to player.;
+69;SMART_ACTION_MOVE_TO_POS;only creatures;True;;PointID;;False;;;;False;;;;False;;;;False;;;;False;;;;Move to xyz pos.||PointId is called by SMART_EVENT_MOVEMENTINFORM.|(movementtype 0 any)|Use any target_type, and use target_x, target_y, target_z, target_o as the coordinates;Read warning on SMART_EVENT_MOVEMENTINFORM if you want to use it! ||SPP missing P2,P3&P4 from TC!|(isTransport,disablePathfinding,ContactDistance)
+70;SMART_ACTION_RESPAWN_TARGET;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Respawns Target.;TC>SMART_ACTION_ENABLE_TEMP_GOBJ
+71;SMART_ACTION_EQUIP;only creatures;True;;CreatureID (creature_equip_template);;True;0:send all|1:?|2:?|4:?|7:send all;Slotmask;;True;;Slot1 (item_template.entry);Only if P1=0!;True;;Slot2 (item_template.entry);Only if P1=0!;True;;Slot3 (item_template.entry);Only if P1=0!;False;;;;Equip things out of creature_equip_template to creature.|P3>Right Hand?|P4>Left Hand?|P5>Ranged?;
+72;SMART_ACTION_CLOSE_GOSSIP;only creatures & gameobjects;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Closes gossip window.;
+73;SMART_ACTION_TRIGGER_TIMED_EVENT;only creatures;True;;Timed Event ID;;False;;;;False;;;;False;;;;False;;;;False;;;;Trigger Timed Event created by action 67 manually.;
+74;SMART_ACTION_REMOVE_TIMED_EVENT;only creatures;True;;Timed Event ID;;False;;;;False;;;;False;;;;False;;;;False;;;;Remove Timed Event created by action 67.;
+75;SMART_ACTION_ADD_AURA;only players & creatures;True;;SpellID;;True;;Targets;SPP??;False;;;;False;;;;False;;;;False;;;;Add aura from spellId to target.||Use target_type 17 to make AoE aura.;P2 SPP Only!
+76;SMART_ACTION_OVERRIDE_SCRIPT_BASE_OBJECT;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;WARNING: CAN CRASH CORE, do not use if you dont know what you are doing;CAN CRASH CORE
+77;SMART_ACTION_RESET_SCRIPT_BASE_OBJECT;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Reset Script of self||also allows scripts with eventflag 1 to occur again.;
+78;SMART_ACTION_CALL_SCRIPT_RESET;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Reset Script of target||also allows scripts with eventflag 1 to occur again;
+79;SMART_ACTION_SET_RANGED_MOVEMENT;only creatures;True;;Range (in yard);;False;;;;False;;;;False;;;;False;;;;False;;;;Sets movement to follow at a specific range to the target.;
+80;SMART_ACTION_CALL_TIMED_ACTIONLIST;only creatures;True;;EntryOrGuid * 100;Overrides already running TAL;True;0:still run after combat|1:stop after combat;stop after combat;;True;0:OOC|1:IC|2:Always;timer update type;;False;;;;False;;;;False;;;;Call TAL.||P1>(smart_scripts.entryorguid with 00 added after the entry, or 01, 02, 03 etc. for multiple action lists);TC>P2:timer update type|TC>P3:can override ongoing tal
+81;SMART_ACTION_SET_NPC_FLAG;only creatures;True;;Flags;;False;;;;False;;;;False;;;;False;;;;False;;;;Set creature_template.npcflag.;
+82;SMART_ACTION_ADD_NPC_FLAG;only creatures;True;;Flags;;False;;;;False;;;;False;;;;False;;;;False;;;;Add flag to creature_template.npcflag.;
+83;SMART_ACTION_REMOVE_NPC_FLAG;only creatures;True;;Flags;;False;;;;False;;;;False;;;;False;;;;False;;;;Remove flag from creature_template.npcflag.;
+84;SMART_ACTION_SIMPLE_TALK;only players & creatures;True;;creature_text.groupid;;False;;;;False;;;;False;;;;False;;;;False;;;;Makes a player say text. SMART_EVENT_TEXT_OVER is not triggered and whispers can not be used.;
+85;SMART_ACTION_INVOKER_CAST;only players & creatures;True;;SpellID;;True;1:Interrupt spell casting|2:Triggered|4:Forces cast even if OOM OOR|8:Prevents from melee if OOM OOR|16:Forces cast on itself|32:Only casts if target not have aura|64:Stop movement on cast unless OOM OOR silenced LOS;castFlags;;False;;;;False;;;;False;;;;False;;;;If avaliable, last used invoker will cast spellId with castFlags on targets.;TC>SMART_ACTION_SELF_CAST
+86;SMART_ACTION_CROSS_CAST;only players & creatures;True;;SpellID;;True;1:Interrupt spell casting|2:Triggered|4:Forces cast even if OOM OOR|8:Prevents from melee if OOM OOR|16:Forces cast on itself|32:Only casts if target not have aura|64:Stop movement on cast unless OOM OOR silenced LOS;castFlags;;True;;CasterTargetType;;True;;CasterTarget param1;;True;;CasterTarget param2;;True;;CasterTarget param3;;Cast Spell P1 with flags P2 as CasterTargetType P3 with Target Params P4-P6 to Target smart_scripts.targettype as ususal.;
+87;SMART_ACTION_CALL_RANDOM_TIMED_ACTIONLIST;only creatures;True;;EntryOrGuid 1 (smart_scripts.entryorguid * 100 + n);;True;;EntryOrGuid 2 (smart_scripts.entryorguid * 100 + n);;True;;EntryOrGuid 3 (smart_scripts.entryorguid * 100 + n);;True;;EntryOrGuid 4 (smart_scripts.entryorguid * 100 + n);;True;;EntryOrGuid 5 (smart_scripts.entryorguid * 100 + n);;True;;EntryOrGuid 6 (smart_scripts.entryorguid * 100 + n);;Call Random TAL from TAL list P1-6.|0 is ignored.;
+88;SMART_ACTION_CALL_RANDOM_RANGE_TIMED_ACTIONLIST;only creatures;True;;EntryOrGuid 1 (smart_scripts.entryorguid * 100 + n);;True;;EntryOrGuid 2 (smart_scripts.entryorguid * 100 + n);;False;;;;False;;;;False;;;;False;;;;Call random TAL between 2 TAL's.|No Idea what Ranged means?|0 is ignored.;
+89;SMART_ACTION_RANDOM_MOVE;only creatures;True;;maxDist (in yard);;False;;;;False;;;;False;;;;False;;;;False;;;;Creature moves to random position in given radius.;
+90;SMART_ACTION_SET_UNIT_FIELD_BYTES_1;only creatures;True;;bytes;;True;;target;evtl. bytes 1/2?;False;;;;False;;;;False;;;;False;;;;Set creature_(template_)addon.bytes_1.||(P1 > 1 sit, 2 sit chair, 3 sleep, 4 sit low, 5 sit med, 6 sit high, 7 dead, 8 kneel, 9 submerge, 33554432 fly when moving, 50331648 fly always);
+91;SMART_ACTION_REMOVE_UNIT_FIELD_BYTES_1;only creatures;True;;bytes;;True;;target;evtl. bytes 1/2?;False;;;;False;;;;False;;;;False;;;;Remove Bytes from creature_(template_)addon.bytes_1.||(P1 > 1 sit, 2 sit chair, 3 sleep, 4 sit low, 5 sit med, 6 sit high, 7 dead, 8 kneel, 9 submerge, 33554432 fly when moving, 50331648 fly always);
+92;SMART_ACTION_INTERRUPT_SPELL;only players & creatures;True;0:no delay|1:with delay;with delay;param assumed!;True;;SpellID;param assumed!;True;0:not instant|1:instant;Instant?;param assumed!;False;;;;False;;;;False;;;;This action allows you to interrupt the current spell being cast. If you do not set the spellId, the core will find the current spell depending on the withDelay and the withInstant values.;SPP Documentation missing P1-P3 from TC.|Format on SPP Doc is different on these so I think they are implemented.
+93;SMART_ACTION_SEND_GO_CUSTOM_ANIM;only gameobjects;True;;Anim Progress (0-255);;False;;;;False;;;;False;;;;False;;;;False;;;;Set Animprogress on Gameobjects.;
+94;SMART_ACTION_SET_DYNAMIC_FLAG;only creatures;True;;Flags;;False;;;;False;;;;False;;;;False;;;;False;;;;Set creature_template.dynamicflags.;
+95;SMART_ACTION_ADD_DYNAMIC_FLAG;only creatures;True;;Flags;;False;;;;False;;;;False;;;;False;;;;False;;;;Add flag from creature_template.dynamicflags.;
+96;SMART_ACTION_REMOVE_DYNAMIC_FLAG;only creatures;True;;Flags;;False;;;;False;;;;False;;;;False;;;;False;;;;Remove flag from creature_template.dynamicflags.;
+97;SMART_ACTION_JUMP_TO_POS;only creatures;True;;speedXY;;True;;speedZ;;True;;targetX;;True;;targetY;;True;;targetZ;;False;;;;Move creature to pos. P3-5 could also mean target coordinates!;
+98;SMART_ACTION_SEND_GOSSIP_MENU;only players;True;;menuId;;True;;npc_text ID;;False;;;;False;;;;False;;;;False;;;;Send GossipMenu to Player.;
+99;SMART_ACTION_GO_SET_LOOT_STATE;only gameobjects;True;0:Not Ready|1:Ready|2:Activated|3:Just deactivated;State;;False;;;;False;;;;False;;;;False;;;;False;;;;Set Gameobject State.;
+100;SMART_ACTION_SEND_TARGET_TO_TARGET;only creatures & gameobjects;True;;TargetListID;;False;;;;False;;;;False;;;;False;;;;False;;;;Send targets previously stored with SMART_ACTION_STORE_TARGET, to another npc/go, the other npc/go can then access them as if it was its own stored list;
+101;SMART_ACTION_SET_HOME_POS;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Set home position.||Use with SMART_TARGET_SELF or SMART_TARGET_POSITION.;
+102;SMART_ACTION_SET_HEALTH_REGEN;only creatures;True;0:no health regen|1:health regen active;HealthRegen;;False;;;;False;;;;False;;;;False;;;;False;;;;Set Health Regen.;
+103;SMART_ACTION_SET_ROOT;only creatures;True;0:can move|1:cant move;Root;;False;;;;False;;;;False;;;;False;;;;False;;;;set root to creature.|(unable to move);
+104;SMART_ACTION_SET_GO_FLAG;only gameobjects;True;;Flags;;False;;;;False;;;;False;;;;False;;;;False;;;;set gameobject_template_addon.flags.;
+105;SMART_ACTION_ADD_GO_FLAG;only gameobjects;True;;Flags;;False;;;;False;;;;False;;;;False;;;;False;;;;add flags to gameobject_template_addon.flags.;
+106;SMART_ACTION_REMOVE_GO_FLAG;only gameobjects;True;;Flags;;False;;;;False;;;;False;;;;False;;;;False;;;;remove flags from gameobject_template_addon.flags.;
+107;SMART_ACTION_SUMMON_CREATURE_GROUP;only creatures;True;;creature_summon_groups.group;;True;0:dont attack invoker|1:attack invoker;attackInvoker;;False;;;;False;;;;False;;;;False;;;;Summon creaturegroup.;TC>SAI target has no effect, use 0
+108;SMART_ACTION_SET_POWER;only creatures;True;;PowerType;;True;;ToSetPower;;False;;;;False;;;;False;;;;False;;;;Set Powertype to Powervalue.;
+109;SMART_ACTION_ADD_POWER;only creatures;True;;PowerType;;True;;PowerToAdd;;False;;;;False;;;;False;;;;False;;;;Add Power to Powertype.;
+110;SMART_ACTION_REMOVE_POWER;only creatures;True;;PowerType;;True;;PowerToRemove;;False;;;;False;;;;False;;;;False;;;;Remove Power from Powertype.;
+111;SMART_ACTION_GAME_EVENT_STOP;only creatures;True;;GameEventId;;False;;;;False;;;;False;;;;False;;;;False;;;;Stop  GameEvent.;
+112;SMART_ACTION_GAME_EVENT_START;only creatures;True;;GameEventId;;False;;;;False;;;;False;;;;False;;;;False;;;;Start GameEvent.;
+113;SMART_ACTION_START_CLOSEST_WAYPOINT;only creatures;True;;wp1;;True;;wp2;;True;;wp3;;True;;wp4;;True;;wp5;;True;;wp6;;Make target follow closest waypoint to its location.;
+114;SMART_ACTION_RISE_UP;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;THIS DOES NOT WORK;Marked in SPP as DOES NOT WORK!||TC>SMART_ACTION_MOVE_OFFSET
+115;SMART_ACTION_RANDOM_SOUND;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+116;SMART_ACTION_SET_CORPSE_DELAY;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+117;SMART_ACTION_DISABLE_EVADE;only creatures;True;0:evade disabled|1:evade enabled;Can Evade?;;False;;;;False;;;;False;;;;False;;;;False;;;;Set Evade.;
+118;SMART_ACTION_GO_SET_GO_STATE;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+119;SMART_ACTION_SET_CAN_FLY;only creatures;True;0:fly disabled|1:fly enabled;Can Fly?;;False;;;;False;;;;False;;;;False;;;;False;;;;Set Fly.;
+120;SMART_ACTION_REMOVE_AURAS_BY_TYPE;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+121;SMART_ACTION_SET_SIGHT_DIST;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+122;SMART_ACTION_FLEE;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+123;SMART_ACTION_ADD_THREAT;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+124;SMART_ACTION_LOAD_EQUIPMENT;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+125;SMART_ACTION_TRIGGER_RANDOM_TIMED_EVENT;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+126;SMART_ACTION_REMOVE_ALL_GAMEOBJECTS;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+127;SMART_ACTION_PAUSE_MOVEMENT;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+128;SMART_ACTION_PLAY_ANIMKIT;only creatures;True;;AnimKitID;;True;0:PlayOneShotAnimKitId|1:SetAIAnimKitId|2:SetMeleeAnimKitId|3:SetMovementAnimKitId;Type;;False;;;;False;;;;False;;;;False;;;;Play AnimKit.;TC>don't use on 3.3.5a!
+129;SMART_ACTION_SCENE_PLAY;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+130;SMART_ACTION_SCENE_CANCEL;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+131;SMART_ACTION_SPAWN_SPAWNGROUP;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+132;SMART_ACTION_DESPAWN_SPAWNGROUP;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+133;SMART_ACTION_RESPAWN_BY_SPAWNID;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+134;SMART_ACTION_INVOKER_CAST;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+135;SMART_ACTION_PLAY_CINEMATIC;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+136;SMART_ACTION_SET_MOVEMENT_SPEED;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+137;SMART_ACTION_PLAY_SPELL_VISUAL_KIT;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+138;SMART_ACTION_OVERRIDE_LIGHT;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+139;SMART_ACTION_OVERRIDE_WEATHER;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+140;SMART_ACTION_SET_AI_ANIM_KIT;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+141;SMART_ACTION_SET_HOVER;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+142;SMART_ACTION_SET_HEALTH_PCT;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+143;SMART_ACTION_CREATE_CONVERSATION;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+144;SMART_ACTION_SET_IMMUNE_PC;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+145;SMART_ACTION_SET_IMMUNE_NPC;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+146;SMART_ACTION_SET_UNINTERACTIBLE;all;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;;Only exists in TC!
+200;SMART_ACTION_BOSS_EVADE;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Force Evade on boss?;SPP Only!
+201;SMART_ACTION_BOSS_ANOUNCE;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Announce Boss?;SPP Only!
+202;SMART_ACTION_MOVE_Z;only creatures;True;;Move? (+-?);param assumed!;False;;;;False;;;;False;;;;False;;;;False;;;;Move Z coord?;SPP Only!
+203;SMART_ACTION_SET_KD;only players;True;;KD?;param assumed!;False;;;;False;;;;False;;;;False;;;;False;;;;Set instanse kd?.;SPP Only!
+204;SMART_ACTION_SET_SCENARIO_ID;only players;True;;ScenarioID;param assumed!;False;;;;False;;;;False;;;;False;;;;False;;;;Set Scenatio Id?;SPP Only!
+205;SMART_ACTION_UPDATE_ACHIEVEMENT_CRITERIA;only players;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Update Achievement Criteria.||scenarioStep table > scenarioID and get criteriaTreeID for step, criteriaTree Table for CriteriaTreeID and Mouse-Over CriteriaID, use Asset entry - SAI 205, 95, <Asset entry> to update player, or 205, 0, <asset>, <amount> if type 0 instead of 92.;SPP Only!
+206;SMART_ACTION_SUMMON_CONVERSATION;only players;True;;ConversationID;param assumed!;False;;;;False;;;;False;;;;False;;;;False;;;;Summon Conversation.;SPP Only!
+207;SMART_ACTION_SUMMON_ADD_PLR_PERSONNAL_VISIBILE;only players;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Add Player In Personnal Visibility.||adds the NPC running the SAI into the players personal visibility (no other players would be able to see it);SPP Only!
+208;SMART_ACTION_SUMMON_AREATRIGGER;only creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Summon Areatrigger.||Missing documentation for params and function.;SPP Only!
+209;SMART_ACTION_JOIN_LFG;only players;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Join LFG.||looks like it dumps the players into the LFG queue for their role, no other details so probably in a generic queue for random dungeon to join others;SPP Only!
+210;SMART_ACTION_CAST_CUSTOM;only players & creatures;True;;SpellId;;True;1:Interrupt spell casting|2:Triggered|4:Forces cast even if OOM OOR|8:Prevents from melee if OOM OOR|16:Forces cast on itself|32:Only casts if target not have aura|64:Stop movement on cast unless OOM OOR silenced LOS;CastFlags;;True;;damageMin;;True;;damageMax;;True;;BasePoints EffectIndex 0;param assumed!;True;;BasePoints EffectIndex 1;param assumed!;Cast Spell with custom values.;SPP Only!
+211;SMART_ACTION_CLEAR_QUEST;only players;True;;QuestID;;False;;;;False;;;;False;;;;False;;;;False;;;;Clear rewarded quest from player.;SPP Only!
+212;SMART_ACTION_SUMMON_SCENE;only players;True;;SceneID;param confirmed!;False;;;;False;;;;False;;;;False;;;;False;;;;Summon Scene.;SPP Only!||Some Scenes wont work on SPP Core!
+213;SMART_ACTION_UNLEARN_SPELL;only players;True;;SpellID;param assumed!;False;;;;False;;;;False;;;;False;;;;False;;;;Unlearn spells from player.;SPP Only!
+214;SMART_ACTION_LEARN_SPELL;only players;True;;SpellID;param assumed!;False;;;;False;;;;False;;;;False;;;;False;;;;Learn spells to player.;SPP Only!
+215;SMART_ACTION_MOD_CURRENCY;only players;True;;CurrencyID;;True;;Count;+&-?;False;;;;False;;;;False;;;;False;;;;Modify currency to player by ID and count.;SPP Only!
+216;SMART_ACTION_CIRCLE_PATH;only creatures;True;;Radius (in yard);;True;0:counterclockwise|1:clockwise;Clockwise;values assumed!;True;;StepCount;;False;;;;False;;;;False;;;;Let creature walk in circles for specific count of steps?;SPP Only!
+217;SMART_ACTION_SET_OVERRIDE_ZONE_LIGHT;only creatures & gameobjects;True;;ZoneID;;True;;LightID;;True;;Time (in ms);;False;;;;False;;;;False;;;;Override LightID for Zone?;SPP Only!
+218;SMART_ACTION_SET_SPEED;only players & creatures;True;0:WALK|1:RUN|2:RUN_BACK|3:SWIM|4:SWIM_BACK|5:TURN_RATE|6:FLIGHT|7:FLIGHT_BACK|8:PITCH_RATE;speedType;;True;;speed;;False;;;;False;;;;False;;;;False;;;;Set Speed for specific type.||(Eventually also for players?);SPP Only!
+219;SMART_ACTION_IGNORE_PATHFINDING;only creatures;True;0:enabled pathfinding|1:ignore pathfinding;Ignore On/Off;;False;;;;False;;;;False;;;;False;;;;False;;;;Enable/Disable ignore pathfinding.;SPP Only!
+220;SMART_ACTION_SUMMON_CREATURE_IN_PERS_VISIBILITY;only players & creatures;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Summon creature in personal visibility to player. Target invoker only. XYZ summon coordinates (DOES NOT WORK);SPP Only!|Marked as DOES NOT WORK!
+221;SMART_ACTION_START_TIMED_ACHIEVEMENT;only players;False;;;;False;;;;False;;;;False;;;;False;;;;False;;;;Start Timed Achievement.||Missing documentation?;SPP Only!
+222;SMART_ACTION_SEND_GO_VISUAL_ID;only gameobjects;True;;VisualID;;False;;;;False;;;;False;;;;False;;;;False;;;;Send Visual ID to Gameobject?||may tell a game object to change visual;SPP Only!
+223;SMART_ACTION_COMPLETE_QUEST;only players;True;;QuestID;;False;;;;False;;;;False;;;;False;;;;False;;;;Complete quest by ID.;SPP Only!
+224;SMART_ACTION_SET_HEALTH_IN_PERCENT;only players & creatures;True;;HP% (0-100);;False;;;;False;;;;False;;;;False;;;;False;;;;Set hp in percent.;SPP Only!
+999;SMART_ACTION_TESTAPP;all;True;0:pv1|1:pv2|2:pv3;c1;w1;True;;c2;w2;True;;c3;w3;True;0:opv;c4;w4;True;0:pv1|1:pv2|2:pv3;c5;w5;True;0:pv1|1:pv2|2:pv3;c6;w6;c;SPP Query Builder TEST Action
