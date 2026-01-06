@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea or improvement for SPP-V2-Query-Builder
 title: "[Feature]: "
-labels: enhancement
+labels: enhancement "not reviewed yet"
 assignees: ""
 ---
 
