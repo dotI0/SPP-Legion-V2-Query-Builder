@@ -1,38 +1,68 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+about: Create a report to help improve SPP-V2-Query-Builder
+title: "[Bug]: "
+labels: bug
+assignees: ""
+---
+
+## Application Version
+Please specify the version of **SPP-V2-Query-Builder** you are using.
+
+Example: `0.0.0.2`
 
 ---
 
-**Describe the bug**
+## Required Declaration Files
+The application always uses all declaration files.  
+To reproduce bugs reliably, **all of the following `.sav` files must be attached**:
+
+- `actions.sav`
+- `condsourcetypes.sav`
+- `condtypes.sav`
+- `events.sav`
+- `targets.sav`
+
+➡️ **Attach all files to this issue**
+
+---
+
+## Bug Description
 A clear and concise description of what the bug is.
 
-**To Reproduce**
+What happened?  
+What did you expect to happen instead?
+
+---
+
+## Steps to Reproduce
 Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+1. Start the application
+2. Load the declaration files
+3. Perform action X
+4. Observe the issue
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+---
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## Reproducibility
+How often can the issue be reproduced?
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+- [ ] Always
+- [ ] Sometimes
+- [ ] Once
+- [ ] Not reproducible
 
-**Additional context**
-Add any other context about the problem here.
+---
+
+## Save State (if reproducible)
+If the issue can be reproduced, please attach the corresponding **save state**.
+
+This is **strongly recommended** and greatly helps debugging.
+
+➡️ Drag & drop the save state file here
+
+---
+
+## Additional Information
+Add any other context, logs, or screenshots that may help.
