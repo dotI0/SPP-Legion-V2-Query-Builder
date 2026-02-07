@@ -1,4 +1,7 @@
 # SPP-V2-Query-Builder (Alpha)
+
+More Informations >>> https://github.com/dotI0/SPP-V2-Query-Builder/wiki
+
 Graphical scripting tool for SAI and Conditions.  
 The tool is customizable but will be available with SPP Legion V2 specific documentation and declarations by default.  
 Implementation of additional TrinityCore functionalities is planned for the future.  
