@@ -1,7 +1,7 @@
 # SPP-Legion-V2-Query-Builder (Alpha)
 
 Tutorials and further information are available in the Wiki tab.  
-[https://github.com/dotI0/SPP-V2-Query-Builder/wiki](https://github.com/dotI0/SPP-Legion-V2-Query-Builder/wiki)
+[Wiki](https://github.com/dotI0/SPP-Legion-V2-Query-Builder/wiki)
 
 Graphical scripting tool for SmartAI and Conditions.  
 The tool is customizable and is provided with SPP Legion V2 specific documentation and declarations by default.  
