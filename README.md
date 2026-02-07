@@ -1,4 +1,4 @@
-# SPP-V2-Query-Builder (Alpha)
+# SPP-Legion-V2-Query-Builder (Alpha)
 
 Tutorials and further information are available in the Wiki tab.  
 https://github.com/dotI0/SPP-V2-Query-Builder/wiki
