@@ -1,0 +1,37 @@
+0;CONDITION_SOURCE_TYPE_NONE;False;;;;False;;;;False;;;;False;;;;Can be used with reference tables eventually?|Whatever that means.;
+1;CONDITION_SOURCE_TYPE_CREATURE_LOOT_TEMPLATE;True;;CreatureID (creature/reference_loot_template);;True;;ItemID (creature/reference_loot_template);;False;;;;False;;;;;
+2;CONDITION_SOURCE_TYPE_DISENCHANT_LOOT_TEMPLATE;True;;Entry (disenchant/reference_loot_template);;True;;ItemID (disenchant/reference_loot_template);;False;;;;False;;;;;
+3;CONDITION_SOURCE_TYPE_FISHING_LOOT_TEMPLATE;True;;Entry (fishing/reference_loot_template);;True;;ItemID (fishing/reference_loot_template);;False;;;;False;;;;;
+4;CONDITION_SOURCE_TYPE_GAMEOBJECT_LOOT_TEMPLATE;True;;Entry (gameobject/reference_loot_template);;True;;ItemID (gameobject/reference_loot_template);;False;;;;False;;;;;
+5;CONDITION_SOURCE_TYPE_ITEM_LOOT_TEMPLATE;True;;Entry (item/reference_loot_template);;True;;ItemID (item/reference_loot_template);;False;;;;False;;;;;
+6;CONDITION_SOURCE_TYPE_MAIL_LOOT_TEMPLATE;True;;Entry (mail/reference_loot_template);;True;;ItemID (mail/reference_loot_template);;False;;;;False;;;;;
+7;CONDITION_SOURCE_TYPE_MILLING_LOOT_TEMPLATE;True;;Entry (milling/reference_loot_template);;True;;ItemID (milling/reference_loot_template);;False;;;;False;;;;;
+8;CONDITION_SOURCE_TYPE_PICKPOCKETING_LOOT_TEMPLATE;True;;Entry (pickpocketing/reference_loot_template);;True;;ItemID (pickpocketing/reference_loot_template);;False;;;;False;;;;;
+9;CONDITION_SOURCE_TYPE_PROSPECTING_LOOT_TEMPLATE;True;;Entry (prospecting/reference_loot_template);;True;;ItemID (prospecting/reference_loot_template);;False;;;;False;;;;;
+10;CONDITION_SOURCE_TYPE_REFERENCE_LOOT_TEMPLATE;True;;Entry (reference_loot_template);;True;;ItemID (_loot_template/reference_loot_template);;False;;;;False;;;;;
+11;CONDITION_SOURCE_TYPE_SKINNING_LOOT_TEMPLATE;True;;Entry (skinning/reference_loot_template);;True;;ItemID (skinning/reference_loot_template);;False;;;;False;;;;;
+12;CONDITION_SOURCE_TYPE_SPELL_LOOT_TEMPLATE;True;;Entry (loot/reference_loot_template);;True;;ItemID (loot/reference_loot_template);;False;;;;False;;;;;
+13;CONDITION_SOURCE_TYPE_SPELL_IMPLICIT_TARGET;True;1:effect 0|2:effect 1|4:effect 2;Mask of effects to be affected by condition;;True;;SpellID;;False;;;;True;0:Potential spell Target|1:Spell caster;Target;;Don't use wowhead to get number of effects, data from wowhead sometimes doesn't match real effect number.;
+14;CONDITION_SOURCE_TYPE_GOSSIP_MENU;True;;MenuID (gossip_menu);;True;;TextID (gossip_menu);;False;;;;True;0:Player|1:WorldObject;Target;;;
+15;CONDITION_SOURCE_TYPE_GOSSIP_MENU_OPTION;True;;MenuID (gossip_menu_options);;True;;OptionID (gossip_menu_options);;False;;;;True;0:Player|1:WorldObject;Target;;;
+16;CONDITION_SOURCE_TYPE_CREATURE_TEMPLATE_VEHICLE;False;;;;True;;Entry (creature);;False;;;;True;0:Player riding vehicle|1:Vehicle creature;;;;
+17;CONDITION_SOURCE_TYPE_SPELL;False;;;;True;;SpellID;;False;;;;True;0:spell Caster|1:Explicit Target of the spell;Target;1>only for spells which take the object selected by caster into account;This source type allows you to define caster/explicit target requirements for spell to be cast.||Explicit target of the spell is the target which is selected by player during cast, not all spells take that target into account. Non-explicit targets of the spell (the ones which are selected by spell like area or nearby targets for example) are not affected by this condition source type, if you want to affect those use CONDITION_SOURCE_TYPE_SPELL_IMPLICIT_TARGET (13) instead.;
+18;CONDITION_SOURCE_TYPE_SPELL_CLICK_EVENT;True;;Entry (creature);;True;;SpellID;;False;;;;True;0:Clicker|1:Spellclick target;Target;;;
+19;CONDITION_SOURCE_TYPE_QUEST_ACCEPT;False;;;;True;;QuestID;;False;;;;False;;;;Condition must be met for quest to be available to player.;TC>CONDITION_SOURCE_TYPE_QUEST_AVAILABLE
+20;CONDITION_SOURCE_TYPE_QUEST_SHOW_MARK;False;;;;True;;QuestID;Param assumed!;False;;;;False;;;;Missing documentations for Params!;SPP Only!
+21;CONDITION_SOURCE_TYPE_VEHICLE_SPELL;True;;Entry (creature);;True;;SpellID;;False;;;;True;0:Player for whom spell bar is shown|1:Vehicle creature;Target;;This will show or hide spells in vehicle spell bar.;
+22;CONDITION_SOURCE_TYPE_SMART_EVENT;True;;ID (smart_scripts.id + 1);+1!!!;True;;EntryOrGuid (smart_scripts);;True;;SourceType (smart_scripts);;True;0:Invoker|1:Object;Target;;;
+23;CONDITION_SOURCE_TYPE_PHASE_DEFINITION;True;;ZoneID;;True;;PhaseDefinitionEntry;PhaseDefinitions Table > Set PhaseID there;False;;;;False;;;;"for whether a phase ID is active or not";TC>CONDITION_SOURCE_TYPE_NPC_VENDOR
+24;CONDITION_SOURCE_TYPE_SPELL_PROC;False;;;;True;;SpellID (of aura which triggers the proc);;False;;;;True;0:Actor|1:ActionTarget;Target;;;
+25;CONDITION_SOURCE_TYPE_NPC_VENDOR;True;;Entry (vendor);;True;;ItemID;;False;;;;True;0:Player|1:Vendor;Target;;;TC>CONDITION_SOURCE_TYPE_TERRAIN_SWAP
+26;CONDITION_SOURCE_TYPE_AREATRIGGER_ACTION;False;;;;False;;;;False;;;;False;;;;Missing documentation on params and function!;TC>CONDITION_SOURCE_TYPE_PHASE
+27;CONDITION_SOURCE_TYPE_BONUS_LOOT_TEMPLATE;False;;;;False;;;;False;;;;False;;;;Missing documentation on params and function!;TC>CONDITION_SOURCE_TYPE_GRAVEYARD
+28;CONDITION_SOURCE_TYPE_VIGNETTE;False;;;;False;;;;False;;;;False;;;;Missing documentation on params and function!;TC>CONDITION_SOURCE_TYPE_AREATRIGGER
+29;CONDITION_SOURCE_TYPE_SEAMLESS_TELEPORT;False;;;;False;;;;False;;;;False;;;;Missing documentation on params and function!;TC>CONDITION_SOURCE_TYPE_CONVERSATION_LINE
+30;CONDITION_SOURCE_TYPE_LOOT_ITEM;False;;;;False;;;;False;;;;False;;;;Missing documentation on params and function!;TC>CONDITION_SOURCE_TYPE_AREATRIGGER_CLIENT_TRIGGERED
+31;CONDITION_SOURCE_TYPE_WORLD_LOOT_TEMPLATE;True;;Entry (world/reference_loot_template);;True;;ItemID (world/reference_loot_template);;False;;;;False;;;;;TC>CONDITION_SOURCE_TYPE_TRAINER_SPELL
+32;CONDITION_SOURCE_TYPE_PLAYER_CHOICE;False;;;;False;;;;False;;;;False;;;;Missing documentation on params and function!||"player choices are when you have pop ups to choose artifacts to pursue, not sure where else it is used";TC>CONDITION_SOURCE_TYPE_OBJECT_ID_VISIBILITY
+33;CONDITION_SOURCE_TYPE_PLAYER_CHOICE_RESPONS;False;;;;False;;;;False;;;;False;;;;Missing documentation on params and function!||"player choices are when you have pop ups to choose artifacts to pursue, not sure where else it is used";TC>CONDITION_SOURCE_TYPE_SPAWN_GROUP
+34;CONDITION_SOURCE_TYPE_WORLD_STATE;False;;;;False;;;;False;;;;False;;;;Missing documentation on params and function!;SPP Only!
+35;CONDITION_SOURCE_TYPE_OBJECT_ID_VISIBILITY;True;3:Unit/Creature/NPC|5:Gameobject;;;True;;Entry;;False;;;;False;;;;;SPP replacement for TC 32!|Params are switched to TC!|SG<>SE
+999;CONDITION_SOURCE_TYPE_TESTAPP;True;;p1;w1;True;0:pv0|1:pv1;p2;w2;True;;p3;w3;True;;p4;w4;c;SPP Query Builder TEST CondSourceType
