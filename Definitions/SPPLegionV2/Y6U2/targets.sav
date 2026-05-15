@@ -1,0 +1,33 @@
+0;SMART_TARGET_NONE;False;;;;False;;;;False;;;;None||(defaults to invoker?);
+1;SMART_TARGET_SELF;False;;;;False;;;;False;;;;Self cast.;
+2;SMART_TARGET_VICTIM;False;;;;False;;;;False;;;;Our current target.||(ie: highest aggro);
+3;SMART_TARGET_HOSTILE_SECOND_AGGRO;True;;maxDist (in yard);Not in official SPP documentation, may not work!;True;;player only (0/1);Not in official SPP documentation, may not work!;True;;powerType + 1;Not in official SPP documentation, may not work!;Second highest aggro.;
+4;SMART_TARGET_HOSTILE_LAST_AGGRO;False;;;;False;;;;False;;;;Dead last on aggro.;
+5;SMART_TARGET_HOSTILE_RANDOM;False;;;;False;;;;False;;;;Just any random target on our threat list.;
+6;SMART_TARGET_HOSTILE_RANDOM_NOT_TOP;False;;;;False;;;;False;;;;Any random target except top threat.;
+7;SMART_TARGET_ACTION_INVOKER;False;;;;False;;;;False;;;;Unit who caused this Event to occur.;
+8;SMART_TARGET_POSITION;False;;;;False;;;;False;;;;Coordinate position.||(use xyzo);
+9;SMART_TARGET_CREATURE_RANGE;True;;creature entry (or 0 for any);;True;;minDist (in yard);;True;;maxDist (in yard);;Creature with specified ID within specified range.;SPP missing P4 from TC!|(number of targets)
+10;SMART_TARGET_CREATURE_GUID;True;;creature guid;;True;;creature entry;;False;;;;Creature with specified GUID.;
+11;SMART_TARGET_CREATURE_DISTANCE;True;;creature entry (or 0 for any);;True;;maxDist (in yard);;False;;;;Creature with specified ID within distance.;SPP missing P3 from TC!|(number of targets)
+12;SMART_TARGET_STORED;True;;id;;False;;;;False;;;;Uses pre-stored target(list);
+13;SMART_TARGET_GAMEOBJECT_RANGE;True;;gameobject entry;;True;;minDist (in yard);;True;;maxDist (in yard);;Object with specified ID within specified range.;SPP missing P4 from TC!|(number of targets)
+14;SMART_TARGET_GAMEOBJECT_GUID;True;;object guid;;True;;object entry;;False;;;;Object with specified GUID.;
+15;SMART_TARGET_GAMEOBJECT_DISTANCE;True;;gameobject entry (or 0 for any);;True;;maxDist (in yard);;True;;number of targets;Not in official SPP documentation, may not work!;Object with specified ID within distance.;
+16;SMART_TARGET_INVOKER_PARTY;False;;;;False;;;;False;;;;Invoker's party members;
+17;SMART_TARGET_PLAYER_RANGE;True;;minDist (in yard);;True;;maxDist (in yard);;False;;;;Player within specified range.||(Random?);
+18;SMART_TARGET_PLAYER_DISTANCE;True;;maxDist (in yard);;False;;;;False;;;;Player within specified distance.||(Random?);
+19;SMART_TARGET_CLOSEST_CREATURE;True;;creature entry (or 0 for any);;True;;maxDist (in yard 0-100);;True;0:only if creature alive|1:only if creature dead;dead;1 can be dead&alive - no documentation;Closest creature with specified ID within specified range.;
+20;SMART_TARGET_CLOSEST_GAMEOBJECT;True;;gameobject entry (or 0 for any);;True;;maxDist (in yard 0-100);;False;;;;Closest object with specified ID within specified range.;
+21;SMART_TARGET_CLOSEST_PLAYER;True;;maxDist (in yard);;False;;;;False;;;;Closest player within specified range.;
+22;SMART_TARGET_ACTION_INVOKER_VEHICLE;False;;;;False;;;;False;;;;Unit's vehicle who caused this Event to occur.;
+23;SMART_TARGET_OWNER_OR_SUMMONER;False;;;;False;;;;False;;;;Unit's owner or summoner.;
+24;SMART_TARGET_THREAT_LIST;False;;;;False;;;;False;;;;All units on creature's threat list.;
+25;SMART_TARGET_CLOSEST_ENEMY;True;;maxDist (in yard);;True;;player only (0/1);Not in official SPP documentation, may not work!;False;;;;Any attackable target (creature or player) within maxDist.;
+26;SMART_TARGET_CLOSEST_FRIENDLY;True;;maxDist (in yard);;True;;player only (0/1);Not in official SPP documentation, may not work!;False;;;;Any friendly unit (creature, player or pet) within maxDist.;
+125;SMART_TARGET_HOSTILE_RANDOM_PLAYER ;False;;;;False;;;;False;;;;Just any random target on our threat list player.;SPP Only!
+126;SMART_TARGET_HOSTILE_RANDOM_NOT_TOP_PLAYER;False;;;;False;;;;False;;;;Any random target except top threat player;SPP Only!
+127;SMART_TARGET_HOSTILE_RANDOM_AURA;False;;;;False;;;;False;;;;Any random target except top threat player||(same as 126? missing documentation!);SPP Only!
+128;SMART_TARGET_RANDOM_POSITION;True;;Range (in yard);;True;;Angle (in degree 0-360);;True;;Distance (in yard);;Any random position.||If distance is set, then it gets a 2d point at the angle/distance away, then I think creates a random position that is <range> distance in width.|Otherwise, random position <range> away from the NPC/object that is running the SAI;SPP Only!||Only works for summoning npc/object!
+129;SMART_TARGET_TARGETUNIT;False;;;;False;;;;False;;;;Target unit by GetTargetUnit().;SPP Only!
+999;SMART_TARGET_TESTAPP;True;0:pv1|1:pv2|2:pv3;c1;w1;True;;c2;w2;True;0:opv;c3;w3;c;SPP Query Builder TEST Target
