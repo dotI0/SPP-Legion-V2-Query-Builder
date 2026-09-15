@@ -67,4 +67,5 @@
 66;CONDITION_TIMEWALKING;False;;;;False;;;;False;;;;true if player is in timewalking;SPP Only!
 67;CONDITION_ACOUNT_QUEST;True;;QuestID;;False;;;;False;;;;true if quest id was rewarded on any char account;SPP Only!
 68;CONDITION_FOLLOWER_AVAILABLE;True;;Follower ID;;False;;;;False;;;;true if follower has been recruited, and not in mission;
+69;CONDITION_STRING_ID;True;;StringId;;False;;;;False;;;;true if the object has StringId ConditionStringValue1;
 999;CONDITION_TESTAPP;True;;c1;w1;True;1:pv1;c2;w2;True;;c3;w3;c;SPP Query Builder TEST CondType
